@@ -1,0 +1,9 @@
+application:
+  replicas: 2
+  image:
+    name: wmattos/fastapi
+    tag: latest
+  service:
+    type: ClusterIP
+  #ingress:
+  #  className: nginx
