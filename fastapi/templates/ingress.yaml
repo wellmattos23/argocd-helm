@@ -1,10 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: simple-api-ing
+  name: {{ .Release.Name }}-simple-api-ing
   annotations:
-    spec.ingressClassName: "nginx"
+    kubernetes.io/ingress.class: "nginx"
 spec:
+  ingressClassName: "nginx"
   rules:
   - host: simplefastapi.com.br
     http:
@@ -13,6 +14,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: simple-api
+            name: {{ .Release.Name }}-fastapi-service
             port:
-              number: 30001
+              number: 80
