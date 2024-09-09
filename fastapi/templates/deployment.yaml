@@ -16,4 +16,4 @@ spec:
       - name: fastapi-container
         image: {{ .Values.application.image.name }}:{{ .Values.application.image.tag }}
         ports:
-        - containerPort: 80
+        - containerPort: 8000

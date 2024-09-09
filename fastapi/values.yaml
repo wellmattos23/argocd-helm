@@ -5,5 +5,3 @@ application:
     tag: latest
   service:
     type: ClusterIP
-  #ingress:
-  #  className: nginx
