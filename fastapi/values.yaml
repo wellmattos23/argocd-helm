@@ -1,5 +1,5 @@
 application:
-  replicas: 2
+  replicas: 4
   image:
     name: wmattos/fastapi
     tag: latest
